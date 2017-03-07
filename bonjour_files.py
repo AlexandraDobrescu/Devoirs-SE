@@ -52,7 +52,7 @@ def main(argv=None):
             for ligne in f:
                 if ligne[0:2] == "M.":
                     mThread.append(Bonjour(ligne.strip(' \r\n')))
-                elif:
+                else if:
                     mlle_local = Bonjour(ligne.strip(' \r\n'))
                     mlleThread.append(mme_local)
                     mlle_local.start()
