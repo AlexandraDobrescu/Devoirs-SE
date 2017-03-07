@@ -46,7 +46,7 @@ def main(argv=None):
         #Argument 1 est le nom de fichier avec un noms per ligne
         mmeThread = []
         mThread = []
-        with open(working_dir + argv[1],0x02009F40) as f:
+        with open(working_dir + argv[1],'r') as f:
             #Dites bonjour a chaque personne de fichier
             for ligne in f:
                 if ligne[0:2] == "M.":
