@@ -17,7 +17,7 @@ class Bonjour(threading.Thread):
         self.personne = personne
     def run(self):
         #Fonction polie - saluer une personne
-        print "Bonjour %(personne)s!\n" %
+        print "Bonjour %(personne)s!\n" % \
           {"personne":self.personne},
         logging.info("Bonjour : %(personne)s" %{"personne":self.personne})
    
