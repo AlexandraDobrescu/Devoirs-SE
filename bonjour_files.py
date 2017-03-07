@@ -21,7 +21,7 @@ class Bonjour(threading.Thread):
           {"personne":self.personne},
         logging.info("Bonjour : %(personne)s" %{"personne":self.personne})
    
-    def utilisation():
+def utilisation():
     #Affichage mode d'utilisation
     print """
           Le programme doit etre appelle avec minimum 1 argument:
