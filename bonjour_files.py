@@ -21,9 +21,9 @@ class Bonjour(threading.Thread):
           {"personne":self.personne},
         logging.info("Bonjour : %(personne)s" %{"personne":self.personne})
    
- def utilisation():
+def utilisation():
     #Affichage mode d'utilisation
-     print """
+    print """
           Le programme doit etre appelle avec minimum 1 argument:
           python bonjour_listes.py Dragos
           """
@@ -44,20 +44,19 @@ def main(argv=None):
         utilisation()
     else:
         #Argument 1 est le nom de fichier avec un noms per ligne
-        #mmeThread = []
+        mmeThread = []
         mThread = []
-        mlleThread = []
         with open(working_dir + argv[1],'r') as f:
             #Dites bonjour a chaque personne de fichier
             for ligne in f:
                 if ligne[0:2] == "M.":
                     mThread.append(Bonjour(ligne.strip(' \r\n')))
                 else:
-                    mlle_local = Bonjour(ligne.strip(' \r\n'))
-                    mlleThread.append(mlle_local)
-                    mlle_local.start()
-        for mlle in mlleThread:
-            mlle.join()
+                    mme_local = Bonjour(ligne.strip(' \r\n'))
+                    mmeThread.append(mme_local)
+                    mme_local.start()
+        for mme in mmeThread:
+            mme.join()
         for m in mThread:
             m.start()
             m.join()
