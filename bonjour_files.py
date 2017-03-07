@@ -46,16 +46,24 @@ def main(argv=None):
         #Argument 1 est le nom de fichier avec un noms per ligne
         mmeThread = []
         mThread = []
+        mlleThread = []
         with open(working_dir + argv[1],'r') as f:
             #Dites bonjour a chaque personne de fichier
             for ligne in f:
                 if ligne[0:2] == "M.":
                     mThread.append(Bonjour(ligne.strip(' \r\n')))
+                elif:
+                    mlle_local = Bonjour(ligne.strip(' \r\n'))
+                    mlleThread.append(mme_local)
+                    mlle_local.start()
                 else:
                     mme_local = Bonjour(ligne.strip(' \r\n'))
                     mmeThread.append(mme_local)
                     mme_local.start()
+        for mlle in mlleThread:
+            mlle.join()
         for mme in mmeThread:
+            mme.start()
             mme.join()
         for m in mThread:
             m.start()
