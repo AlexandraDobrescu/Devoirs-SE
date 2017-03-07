@@ -50,16 +50,13 @@ def main(argv=None):
         with open(working_dir + argv[1],'r') as f:
             #Dites bonjour a chaque personne de fichier
             for ligne in f:
-                if ligne[0:2] == "M.":
+                if (ligne[0:2] == "M." and ligne[0:3] == "Mme." ):
                     mThread.append(Bonjour(ligne.strip(' \r\n')))
-                else if:
+                    mmeThread.append(Bonjour(ligne.strip(' \r\n')))
+                else:
                     mlle_local = Bonjour(ligne.strip(' \r\n'))
                     mlleThread.append(mme_local)
                     mlle_local.start()
-                else:
-                    mme_local = Bonjour(ligne.strip(' \r\n'))
-                    mmeThread.append(mme_local)
-                    mme_local.start()
         for mlle in mlleThread:
             mlle.join()
         for mme in mmeThread:
