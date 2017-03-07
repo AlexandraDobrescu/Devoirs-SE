@@ -56,7 +56,7 @@ def main(argv=None):
                     mlle_local = Bonjour(ligne.strip(' \r\n'))
                     mlleThread.append(mlle_local)
                     mlle_local.start()
-        for mlle in mmeThread:
+        for mlle in mlleThread:
             mlle.join()
         for m in mThread:
             m.start()
