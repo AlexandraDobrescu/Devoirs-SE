@@ -1,1 +1,1 @@
-# Devoirs-SE
+# Devoirs-SE c’est le lieu où vous pouvez trouver mon travail pour les systèmes d'exploitation, en python. J’ai testé le code sur codeenv et il marche, mais, en avance, j'ai préféré de l'exécuter dans la ligne de commande.
