@@ -45,18 +45,24 @@ def main(argv=None):
     else:
         #Argument 1 est le nom de fichier avec un noms per ligne
         mlleThread = []
+        mmeThread = []
         mThread = []
         with open(working_dir + argv[1],'r') as f:
             #Dites bonjour a chaque personne de fichier
             for ligne in f:
                 if ligne[0:2] == "M.":
-                    mThread.append(Bonjour(ligne.strip(' \r\n')))
+                   mThread.append(Bonjour(ligne.strip(' \r\n')))
+                elif ligne[0:4] == "Mme.":
+                   mmeThread.append(Bonjour(ligne.strip(' \r\n'))) 
                 else:
-                    mlle_local = Bonjour(ligne.strip(' \r\n'))
-                    mlleThread.append(mlle_local)
-                    mlle_local.start()
+                   mlleThread.append(Bonjour(ligne.strip(' \r\n')))
+                
         for mlle in mlleThread:
-            mlle.join()
+            mlle.start()
+            mlle.join()            
+        for mme in mmeThread:
+            mme.start()
+            mme.join()
         for m in mThread:
             m.start()
             m.join()
@@ -66,3 +72,4 @@ def main(argv=None):
 if __name__ == "__main__":
     #Simplifiez la logique de la fonction principale
     sys.exit(main())
+
