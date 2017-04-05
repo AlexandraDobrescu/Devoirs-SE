@@ -22,7 +22,7 @@ serversocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_address =(host, port)
 serversocket.connect((server_address))
 # queue up to 5 requests
-serversocket.listen(5)
+#serversocket.listen(5)
 
 def client_send():
     while True:
