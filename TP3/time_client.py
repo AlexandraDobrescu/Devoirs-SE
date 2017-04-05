@@ -32,7 +32,7 @@ def client_send():
 def client_recv():
     while True:
         reply = serversocket.recv(1024)
-            print "received", repr(reply)
+            print "received" + repr(reply)
  
  
 thread_send = []
