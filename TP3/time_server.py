@@ -8,6 +8,7 @@ Ce serveur accepte 5 clients concurents et indique l'heure de serveur.
 import socket
 import time
 import sys
+import threading
 
 # get local machine name
 host = socket.gethostname()
@@ -33,7 +34,7 @@ def client_envoi():
 def client_recieve():
         while True:
                 reply = serversocket.recv(1024)
-                print "recu", repr(reply)
+                print "recu" + repr(reply)
  
  
 thread_send = []
