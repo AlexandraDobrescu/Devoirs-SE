@@ -1,8 +1,7 @@
 """
 Le premier prgramme en Python
-@author Dragos STOICA
-@version 0.1
-@date 16.feb.2014
+@author Alexandra Dobrescu
+@date 09.03.2017
 """
 
 def dites_bonjour(personne):
